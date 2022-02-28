@@ -2,7 +2,7 @@
 comparing the result of executing a certain function with different arguments"""
 
 import datetime
-from types import FunctionType
+from types import BuiltinFunctionType
 from misc import F, output
 
 
@@ -11,7 +11,7 @@ class Container:
     a certain function with different arguments"""
 
     def __init__(self, func):
-        if isinstance(func, FunctionType):
+        if isinstance(func, BuiltinFunctionType):
             raise TypeError("the constructor accepts only functions")
         self._func = func
         self._tests = []
