@@ -41,7 +41,7 @@ ___
 	tester = Container(test)  # creating instance of Container class
 	tester.equal(5, 2, 3)  # comparison of 5 and sums of 2 and 3
 	tester.more(12, 4, 5)  # checking whether the sum of 4 and 5 is greater than 12
-	tester.notequal(5, 2, 2)  # checking whether the sum of 2 and 2 is greater than 12
+	tester.notequal(5, 2, 2)  # checking whether the sum of 2 and 2 is not equal 12
 	tester.start_testing()  # running the test
 
 ### output:
