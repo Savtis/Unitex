@@ -19,7 +19,7 @@ class Container:
         self._failed = 0
         self._count = 1
 
-    def _progress(self, passed):
+    def _progress(self, passed: bool):
         """a private method that increases the
         indicators of the number of tests,
         tests passed and failed indicators"""
@@ -45,14 +45,14 @@ class Container:
         """!="""
         self._tests.append(["!=", comparison_thing, args, kwargs])
 
-    def remove(self, index):
+    def remove(self, index: int):
         """a method that removes a test from the list of scheduled tests"""
         try:
             del self._tests[index - 1]
         except IndexError as range_out:
             raise IndexError("index outside the range of the test list") from range_out
 
-    def execution_time(self, exact, *args, **kwargs):
+    def execution_time(self, exact: bool, *args, **kwargs):
         """shows the execution time of the function"""
         self._tests.append(["time", exact, args, kwargs])
 
